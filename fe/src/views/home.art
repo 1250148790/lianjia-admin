@@ -1,0 +1,17 @@
+<div class="module-head" id="tab-title">
+    <h3>管理系统 - 首页</h3>
+</div>
+<div class="alert">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>Welcome!</strong>  Welcome
+</div>
+<div class="alert alert-error">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>Welcome!</strong>  Welcome
+</div>
+<div class="alert alert-success">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>Welcome!</strong>  Welcome
+</div>
+
+<br/>

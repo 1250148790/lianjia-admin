@@ -1,0 +1,82 @@
+<div class="module-head tab-tit" id="tab-title">
+    <h3>管理系统 - 房源列表</h3>
+</div>
+<div class="module-body table">
+    <div class="show-search">
+        <div class="btn-primary btn-add">添加</div>
+        <!-- <button id="bbb">1aaa</button> -->
+        <div id="DataTables_Table_0_length" class="dataTables_length">
+            <label>Show 
+            <select size="1" id="show" name="DataTables_Table_0_length" aria-controls="DataTables_Table_0">
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="5">5</option>
+            </select> 
+            entries</label>
+        </div>
+        <div class="dataTables_filter btn-div" id="DataTables_Table_0_filter">
+            <label>
+                <b>Search: </b> 
+            <input type="text" id="input-search" placeholder="请输入小区名称或房屋地点查询" aria-controls="DataTables_Table_0"></label>
+            <button class="btn" id="btn-search" type="button">
+                <i class="icon-search"></i>
+            </button>
+        </div>
+    </div>
+    <table id="mytab" cellpadding="0" cellspacing="0" border="0" class="datatable-1 table table-bordered table-striped	 display"
+        width="100%" >
+        <thead>
+            <tr>
+                <th style="width:5%">ID</th>
+                <th style="width:15%">房屋照片</th>
+                <th style="width:13%">小区名称</th>
+                <th style="width:13%">房屋类型</th>
+                <th style="width:13%">房屋价格</th>
+                <th style="width:13%">房屋地点</th>
+                <th style="width:13%">发布时间</th>
+                <th style="width:15%">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{if list.length > 0 }}
+                {{each list}}
+                <tr class="odd gradeX" >
+                    <td style="line-height: 75px">  {{$index+1}} </td>
+                    <td class="td_img"><img src="http://localhost:3000/uploads/{{$value.houseImg}}" alt=""></td>
+                    <td>{{$value.title}}</td>
+                    <td>{{$value.houseType}}</td>
+                    <td>{{$value.price}}</td>
+                    <td>{{$value.place}}</td>
+                    <td>{{$value.creatTime}}</td>
+                    <td class="btn-sum">
+                        <div data-id="{{$value._id}}" class="btn-info btn-edit">修改</div>
+                        <div data-id="{{$value._id}}" class="btn-danger btn-del">删除</div>
+                    </td>
+                </tr>
+                {{/each}}
+            {{else}}
+                <tr class="odd gradeX">
+                    <td style="height:50px;line-height:50px;" colspan="8">暂时没有数据 , 请点击左上角添加一条数据吧 - </td>
+                </tr>
+            {{/if}}
+        </tbody>
+    </table>
+</div>
+    <div class="footer">
+        <div class="dataTables_info" id="DataTables_Table_0_info">Management System - Housing List</div>
+        <!-- 如果列表数大于0 渲染分页效果 -->
+        {{if total > 0}}
+            <div class="dataTables_paginate paging_two_button btn-group datatable-pagination" id="DataTables_Table_0_paginate">
+                <a class="paginate_disabled_previous prev" href="javascript:void(0)" tabindex="0" role="button" id="DataTables_Table_0_previous" aria-controls="DataTables_Table_0">
+                    <i class="icon-chevron-left shaded"></i>
+                </a>
+                {{each pageTotal}}
+                    <a data-index="{{$index}}" {{if $index == pageNo }} class="active" {{/if}} href="#">{{$index+1}}</a>
+                {{/each}}
+                <a data-pagetotal={{pageTotal.length}} class="paginate_enabled_next next" href="javascript:void(0)" tabindex="0" role="button" id="DataTables_Table_0_next" aria-controls="DataTables_Table_0">
+                    <i class="icon-chevron-right shaded"></i>
+                </a>
+            </div>
+            {{else}}
+        {{/if}}
+    </div>

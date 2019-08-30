@@ -1,0 +1,59 @@
+<div href="#" class="dropdown-toggle down" data-toggle="dropdown">
+    {{if isSignin}}
+        <img src="/public/images/user-1.png" class="nav-avatar" />
+        <a href="#">你好 {{username}}</a>
+    {{/if}}
+    {{if !isSignin}}
+        <a class="logn" id="btn-signin" href="#">登录</a>
+        <a class="logn" id="btn-signup" href="#">注册</a>
+    {{/if}}
+    <b class="caret"></b>
+</div>
+<ul class="dropdown-menu">
+{{if !isSignin}}
+    <form class="form-vertical" action='javascript:void(0)' id="btn-form">
+        <div class="module-head">
+            <h3 class="title-h3"></h3>
+        </div>
+        <div class="module-body">
+            <div class="control-group">
+                <div class="controls row-fluid">
+                    <input class="span12" name="username" type="text" id="inputEmail" placeholder="Username">
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls row-fluid">
+                    <input class="span12" name="password" type="password" id="inputPassword" placeholder="Password">
+                </div>
+            </div>
+        </div>
+        <div class="module-foot">
+            <div class="control-group">
+                <div class="controls clearfix">
+                    <button type="submit" class="btn btn-primary pull-right" id="btn-sumbit"></button>
+                    <label class="checkbox">
+                        <input type="checkbox" checked>记住密码
+                    </label>
+                </div>
+            </div>
+        </div>
+    </form>
+{{/if}}
+{{if isSignin}}
+    <form class="form-vertical">
+        <div class="module-head"></div>
+        <div class="module-body content">
+            <img src="/public/images/user-1.png" class="nav-avatar" />
+            <b>{{username}}</b>
+            <i> - 管理员</i>
+        </div>
+        <div class="module-foot">
+            <div class="control-group">
+                <div class="controls clearfix">
+                    <button type="submit" class="btn btn-primary pull-right btn-signout">退出</button>
+                </div>
+            </div>
+        </div>
+    </form>
+{{/if}}
+</ul>

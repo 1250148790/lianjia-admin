@@ -1,0 +1,184 @@
+body{
+    .tab-tit{
+        margin-bottom: 15px !important;
+    }
+    #tab-title{
+        margin-bottom: 50px;
+    }
+    .nav{
+        margin-bottom: 0;
+    }
+    .select a{
+        color: #fafafa;
+        i{
+            color: #fafafa !important;
+        }
+    }
+    .show-search{
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+        height:100px;
+        #input-search{
+            font-size:12px;
+        }
+        .btn-add{
+            width:90px;
+            height:40px;
+            border-radius: 6px;
+            text-align: center;
+            line-height: 40px;
+            cursor: pointer;
+            font-size:14px; 
+            margin-bottom: 16px;
+        }
+        .btn-div>label,.btn-div>input,.btn-div>button{
+            float: left;
+            text-align: center;
+            b{
+                font-weight:500 ;
+                font-size: 13px;
+            }
+        }
+    }
+    .nav-user{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .checkbox{
+            padding-top:8px;
+            display: none;
+        }
+        .content{
+            padding:20px;
+            img{
+                width:40px;
+                height:40px;
+                border-radius:50%;
+            }
+            b{
+                padding-left:10px;
+            }
+            i{
+                font-style: normal;
+            }
+        }
+        .down{
+            img{
+                margin-top: 0px;
+            }
+            a:hover{
+                text-decoration: none;
+            }
+            height: 100%;
+            padding:0 10px;
+            line-height: 50px;
+            a{
+                color:#333;
+                line-height: 60px;
+                padding: 0 3px;
+                display: inline-block;
+            }
+            .caret{
+                margin-top:28px !important;
+            }
+        }
+    }
+    #mytab{
+        th{
+            font-size:15px; 
+            color:333;
+            padding: 15px;
+            text-align: center;
+        }
+        td{
+            padding: 10px 15px;
+            text-align: center;
+        }
+        .td_img{
+            padding:8px;
+            img{
+                width:100px;
+                height:80px;
+            }
+        }
+        .table th, .table td {
+            padding: 10px;
+            line-height: 20px;
+            text-align: left;
+            vertical-align: middle; 
+            border-top: 1px solid #dddddd;
+        }
+        .btn-sum{ 
+            height:75px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .btn-edit,.btn-del{
+                display: inline-block;
+                padding:6px;
+                border-radius: 6px;
+                cursor: pointer;
+                flex: 1;
+            }
+            .btn-edit{
+                margin-right: 6px;
+            }
+        }
+    }
+    #btnn{
+        height:50px;
+        margin-left:180px;
+        padding-right:180px;
+    }
+    .btn-back,.btn-submit{
+        float: left;
+        width:50px;
+        height:36px;
+        border-radius: 6px;
+        text-align: center;
+        line-height: 36px;
+        cursor: pointer;
+        padding:0;
+        border:0 white;
+        outline: #fafafa;
+    }
+    .btn-back{
+        width:51px;
+        height:37px;
+    }
+    .btn-submit{
+        float:right;
+    }
+    .control-group{
+        .label-tr{
+            width:220px;
+            margin-right:20px;
+        }
+    }
+    .footer{
+        clear: both;
+        padding:50px 0;
+        font-size:14px !important;
+        .btn-group {
+            font-size: 12px;
+        }
+        .active{
+            background:rgba(63, 65, 224, 0.7);
+            color:#fff;
+        }
+        a{
+            color:#333;
+            cursor: pointer;
+        }
+        .paginate_enabled_next,.paginate_disabled_previous{
+            color:#666;
+        }
+        .datatable-pagination>a.paginate_disabled_previous, .datatable-pagination>a.paginate_disabled_next {
+            cursor: pointer;
+        }
+        .datatable-pagination>a.paginate_disabled_previous i, .datatable-pagination>a.paginate_disabled_next i {
+            opacity:1
+        }
+    }
+}
