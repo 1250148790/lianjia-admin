@@ -5,7 +5,7 @@
     <div class="control-group">
         <label class="control-label label-tr" for="houseImg">房屋照片 :</label>
         <div class="controls">
-                <img width="80" height="50" src="http://localhost:3000/uploads/{{houseImg}}" alt="">
+                <img width="80" height="50" src="http://10.60.15.71:3000/uploads/{{houseImg}}" alt="">
             <input type="file" placeholder="请上传房屋照片" id="houseImg" name="houseImg" class="span8">
         </div>
     </div>

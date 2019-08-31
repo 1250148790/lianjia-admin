@@ -42,7 +42,7 @@
                 {{each list}}
                 <tr class="odd gradeX" >
                     <td style="line-height: 75px">  {{$index+1}} </td>
-                    <td class="td_img"><img src="http://localhost:3000/uploads/{{$value.houseImg}}" alt=""></td>
+                    <td class="td_img"><img src="http://10.60.15.71:3000/uploads/{{$value.houseImg}}" alt=""></td>
                     <td>{{$value.title}}</td>
                     <td>{{$value.houseType}}</td>
                     <td>{{$value.price}}</td>
